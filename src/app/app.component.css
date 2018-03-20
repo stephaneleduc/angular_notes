@@ -1,0 +1,46 @@
+#form {
+
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap : wrap;
+    justify-content:space-around;
+    min-height: 100vh;
+}
+
+.note {
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    height:200px;
+    width:200px;
+    border: 2px solid grey;
+    background-color: rgb(216, 87, 13);
+    text-transform: capitalize;
+}
+
+.note .remove {
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+
+
+.note .edit {
+
+    position: absolute;
+    top: 5px;
+    right: 200px;
+
+}
+
+.remove, .edit {
+    cursor: pointer;
+}
