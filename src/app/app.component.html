@@ -7,16 +7,25 @@
     [content] = "modal_message"
 ></app-modal>
 
-<div class="container" (click)="cancel($event)">
 
-    <div *ngFor="let note of notes ; index as position" class="note">
+
+
+<div class="container" (click)="cancel($event)">
+   
+    <app-note *ngFor="let note of notes ; index as position" 
+              [usednote] = "note"
+              [usedposition] = "position"
+              (onDelete) = "deleteNote($event)"
+              (onEdit)= "editNote($event)"
+    ></app-note>
+    
+    <!-- <div *ngFor="let note of notes ; index as position" class="note">
         <span (click)="editNote(note)" class='edit'>E</span>
         <span (click)="deleteNote(position)" class='remove'>X</span>
         <h3>{{ note.title }}</h3>
         <p>{{ note.content }}</p>
         <p> <i> {{ note.date | date:'dd/MM/yyyy HH:mm:ss' }} </i> </p>
-    </div>
-
+    </div> -->
 
 </div>
 

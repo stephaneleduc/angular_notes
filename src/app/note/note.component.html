@@ -1,0 +1,7 @@
+<div class="note">
+    <span (click)="edit()" class='edit'>E</span>
+    <span (click)="delete()" class='remove'>X</span>
+    <h3>{{ usednote.title }}</h3>
+    <p>{{ usednote.content }}</p>
+    <p> <i> {{ usednote.date | date:'dd/MM/yyyy HH:mm:ss' }} </i> </p>
+</div>
